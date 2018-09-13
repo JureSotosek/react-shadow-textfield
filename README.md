@@ -2,7 +2,7 @@
 
 ![NPM](https://img.shields.io/npm/v/react-shadow-textfield.svg?style=flat)
 
-A textfield component with a shadow for React.
+A react textfield component that actually looks nice.
 
 ## Example
 
