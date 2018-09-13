@@ -8,6 +8,8 @@ A react textfield component that actually looks nice.
 
 http://buildastack.io/builder/
 
+<img src="media/example.png" width="680">
+
 ## Install
 
 ```
