@@ -30,7 +30,7 @@ const StyledInput = styled.input`
   font-size: 20px;
 `;
 
-class InputField extends React.Component {
+class TextField extends React.Component {
   constructor() {
     super();
 
@@ -45,7 +45,8 @@ class InputField extends React.Component {
     const {
       className,
       style,
-      label,
+      labelLeft,
+      labelRight,
       placeholder,
       value,
       onChange
@@ -53,7 +54,7 @@ class InputField extends React.Component {
 
     return (
       <Wrapper className={className} style={style}>
-        <Label>{label}</Label>
+        {labelLeft && <Label>{labelLeft}</Label>}
         <StyledInput
           type="text"
           placeholder={placeholder}
@@ -63,9 +64,10 @@ class InputField extends React.Component {
             this.input = input;
           }}
         />
+        {labelRight && <Label>{labelRight}</Label>}
       </Wrapper>
     );
   }
 }
 
-export default InputField;
+export default TextField;
