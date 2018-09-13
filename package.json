@@ -1,7 +1,7 @@
 {
   "name": "react-shadow-textfield",
   "version": "0.0.1",
-  "description": "",
+  "description": "A react textfield component that actually looks nice",
   "main": "dist/index.js",
   "scripts": {
     "build": "babel src -d dist ",
