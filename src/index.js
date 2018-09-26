@@ -22,9 +22,9 @@ const inputStyle = {
   width: '100%',
 
   border: '0 solid',
-  outline: none,
+  outline: 'none',
 
-  backgroundColor: transparent,
+  backgroundColor: 'transparent',
   fontSize: 20
 };
 
@@ -51,9 +51,9 @@ class TextField extends React.Component {
     } = this.props;
 
     return (
-      <Wrapper className={className} style={{ ...wrapperStyle, ...style }}>
-        {labelLeft && <Label style={labelStyle}>{labelLeft}</Label>}
-        <StyledInput
+      <div className={className} style={{ ...wrapperStyle, ...style }}>
+        {labelLeft && <div style={labelStyle}>{labelLeft}</div>}
+        <input
           style={inputStyle}
           type="text"
           placeholder={placeholder}
@@ -64,7 +64,7 @@ class TextField extends React.Component {
           }}
         />
         {labelRight && <Label>{labelRight}</Label>}
-      </Wrapper>
+      </div>
     );
   }
 }
