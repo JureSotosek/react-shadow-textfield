@@ -1,34 +1,32 @@
 import React from 'react';
 
-import styled from 'styled-components';
+const wrapperStyle = {
+  minWidth: '100%',
 
-const Wrapper = styled.div`
-  min-width: 100px;
+  boxSizing: 'border-box',
+  padding: 7,
+  borderRadius: 7,
+  boxShadow: '0 5px 15px 0 rgba(37, 44, 97, 0.25)',
 
-  box-sizing: border-box;
-  padding: 7px;
-  border-radius: 7px;
-  box-shadow: 0 5px 15px 0 rgba(37, 44, 97, 0.25);
+  display: 'flex',
+  flexDirection: 'row'
+};
 
-  display: flex;
-  flex-direction: row;
-`;
+const labelStyle = {
+  marginRight: 5,
+  marginLeft: 5,
+  fontSize: 20
+};
 
-const Label = styled.div`
-  margin-right: 5px;
-  margin-left: 5px;
-  font-size: 20px;
-`;
+const inputStyle = {
+  width: '100%',
 
-const StyledInput = styled.input`
-  width: 100%;
+  border: '0 solid',
+  outline: none,
 
-  border: 0 solid;
-  outline: none;
-
-  background-color: transparent;
-  font-size: 20px;
-`;
+  backgroundColor: transparent,
+  fontSize: 20
+};
 
 class TextField extends React.Component {
   constructor() {
@@ -53,9 +51,10 @@ class TextField extends React.Component {
     } = this.props;
 
     return (
-      <Wrapper className={className} style={style}>
-        {labelLeft && <Label>{labelLeft}</Label>}
+      <Wrapper className={className} style={{ ...wrapperStyle, ...style }}>
+        {labelLeft && <Label style={labelStyle}>{labelLeft}</Label>}
         <StyledInput
+          style={inputStyle}
           type="text"
           placeholder={placeholder}
           value={value}
