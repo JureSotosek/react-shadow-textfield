@@ -60,7 +60,7 @@ class TextField extends React.Component {
           placeholder={placeholder}
           value={value}
           onChange={onChange}
-          ref={input => {
+          innerRef={input => {
             this.input = input;
           }}
         />
